@@ -11,16 +11,80 @@
   <title>NewProvidence - Team 4</title>
 </head>
 <body>
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
   <header>
     <div class="NewProvidence-header">
-
+      <span class="NewProvidence-header-logo">
+        <a href="">
+          <img src="img/NewProvidence main logo.png" alt="NewProvidence">
+        </a>
+      </span>
+      <div class="NewProvidence-header-navigation">
+        <div class="NewProvidence-header-navigation-menu-1 NewProvidence-header-navigation-menu">
+          <ul class="NewProvidence-header-navigation-list">
+            <li class="NewProvidence-header-navigation-list-item">
+              <a class="NewProvidence-header-navigation-list-link" href="">Tour</a>
+            </li>
+            <li class="NewProvidence-header-navigation-list-item">
+              <a class="NewProvidence-header-navigation-list-link" href="">Features</a>
+            </li>
+            <li class="NewProvidence-header-navigation-list-item">
+              <a class="NewProvidence-header-navigation-list-link" href="">Pricing</a>
+            </li>
+            <li class="NewProvidence-header-navigation-list-item">
+              <a class="NewProvidence-header-navigation-list-link-gray" href="">Help</a>
+            </li>
+            <li class="NewProvidence-header-navigation-list-item">
+              <a class="NewProvidence-header-navigation-list-link" href="">Contacts</a>
+            </li>
+            <li class="NewProvidence-header-navigation-list-item">
+              <a class="NewProvidence-header-navigation-list-link-btn" href=""><i class="fab fa-apple"></i> Get App</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="NewProvidence-header-info">
+        <h1 class="NewProvidence-header-info-title">What happens tomorrow?</h1>
+        <p class="NewProvidence-header-info-text">The sight of the tumblers restored Bob Sawyer to a degree of equanimity which he had not possessed since his interview with his landlady. His face brightened up, and he began to feel quite convivial.</p>
+        <a class="NewProvidence-header-info-btn" href=""><i class="fas fa-play"></i> Watch Video</a>
+      </div>
     </div>
   </header>
 
   <main>
-    <div class="NewProvidence-benefits">
+    <div class="NewProvidence-benefits-1">
+        <div class="NewProvidence-benefits-1-lock">
+          <img class="NewProvidence-benefits-1-imgs" src="img/lock-icon.png" alt="A lock">
+          <h3 class="NewProvidence-benefits-1-heading">Real-time all the time</h3>
+          <p class="NewProvidence-benefits-1-text">Thus much I thought proper to tell you in relation to yourself, and to the trust I reposed in you.</p>
+          <br>
+          <p class="NewProvidence-benefits-1-text">Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door.</p>
+        </div>
+        <div class="NewProvidence-benefits-1-clock">
+          <img class="NewProvidence-benefits-1-imgs" src="img/clock-icon.png" alt="A clock">
+          <h3 class="NewProvidence-benefits-1-heading">Adopt without any obstacles</h3>
+          <p class="NewProvidence-benefits-1-text">This sounded a very good reason, and Alice was quite pleased to know it. 'I never thought of that before!' she said.</p>
+          <br>
+          <p class="NewProvidence-benefits-1-text">This I have produced as a scantling of Jack’s great eloquence and the force of his reasoning upon such abstruse matters.</p>
+        </div>
+      </div>
 
+    <div class="NewProvidence-benefits-2">
+        <div>
+          <img class="NewProvidence-benefits-2-img" src="img/iPhone 6-big.png" alt="Iphone 6">
+        </div>
+        <div class="NewProvidence-benefits-2-description">
+          <h2 class="NewProvidence-benefits-2-heading">Your day is protected</h2>
+          <p class="NewProvidence-benefits-2-text">There have not been any since we have lived here, said my mother.</p>
+          <br>
+          <p class="NewProvidence-benefits-2-text">We thought - Mr. Copperfield thought - it was quite a large rookery; but the nests were very old ones, and the birds have deserted them a long while.</p>
+          <a class="NewProvidence-benefits-2-btn-1 NewProvidence-benefits-2-btns" href="">Try to hack us <i class="fas fa-arrow-right"></i></a>
+          <a class="NewProvidence-benefits-2-btn-2 NewProvidence-benefits-2-btns" href="">Learn more</a>
+        </div>
     </div>
+
     <div class="NewProvidence-spread">
 
     </div>
@@ -46,5 +110,9 @@
 
     </div>
   </footer>
+
+  <script>
+    document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.NewProvidence-header-navigation-list').classList.toggle('show'));
+  </script>
 </body>
 </html>
