@@ -1,6 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Varela+Round&display=swap');
+
+/*Icomoon font*/
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('font/icomoon/icomoon.eot?3qy8rf');
+  src:  url('font/icomoon/icomoon.eot?3qy8rf#iefix') format('embedded-opentype'),
+    url('font/icomoon/icomoon.ttf?3qy8rf') format('truetype'),
+    url('font/icomoon/icomoon.woff?3qy8rf') format('woff'),
+    url('font/icomoon/icomoon.svg?3qy8rf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {  
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pinterest:before {
+  content: "\e900";
+}
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-tumblr:before {
+  content: "\eab9";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+
+/* end Icomoon font*/
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,8 +58,8 @@ body {
   font-size: 18px;
   line-height: 1.5;
   text-align: center;
-  max-width: 1980px;
-  margin: 0 auto;
+  /*max-width: 1980px;*/
+  margin: 0;
 }
 
 a {
@@ -30,6 +80,13 @@ li {
   list-style: none;
 }
 
+.content {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 /*HEADER*/
 
 /*BENEFITS*/
@@ -43,22 +100,444 @@ li {
 /*SLIDER*/
 
 /*PLANS*/
+.NewProvidence-plans {
+  line-height: 1.2;
+  background: #f4f4f5;
+}
+.NewProvidence-plans .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.NewProvidence-plans .switch-plan {
+  width: 30%;
+  max-width: 330px;
+  padding: 30px 20px 40px 0;
+  text-align: left;
+}
+
+.NewProvidence-plans .switch-plan-title {
+  padding-bottom: 20px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 32px;
+  text-align: left;
+  color: #26272d;
+}
+
+.NewProvidence-plans .switch-plan-change {
+  padding: 20px 0 34px;
+}
+
+.NewProvidence-plans .switch-plan-change-title {
+  padding: 17px 0;
+  color: #26272d;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.NewProvidence-plans .radio-block {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  border: 1px solid #d5d6d7;
+  border-radius: 25px;
+}
+
+.NewProvidence-plans input[type=radio] {
+  display: none;
+}
+
+.NewProvidence-plans .radio-block label {
+  display: inline-block;
+  min-width: 122px;
+  font-size: 16px;
+  padding: 11px;  
+  color: #8c8f94;
+  text-align: center;
+  border-right: none;
+  border-radius: 25px;
+  cursor: pointer;
+  user-select: none;  
+  transition: .3s ease-out; 
+}
+
+.NewProvidence-plans .radio-block label:hover {
+  color: #000;
+}
+
+.NewProvidence-plans .radio-block input[type=radio]:checked + label {
+  color: #000;
+  background: #fff;
+  -webkit-box-shadow: 0px 30px 50px 0px rgba(92,95,101,0.28);
+  -moz-box-shadow: 0px 30px 50px 0px rgba(92,95,101,0.28);
+  box-shadow: 0px 30px 50px 0px rgba(92,95,101,0.28);
+}
+
+.NewProvidence-plans .switch-plan-text {
+  padding: 30px 0; 
+}
+
+.NewProvidence-plans .switch-plan-team {
+  font-size: 14px;
+}
+
+.NewProvidence-plans .switch-plan-team p {
+  display: inline-block;
+}
+
+.NewProvidence-plans .switch-plan-link {
+  color: #267df4;
+  text-decoration: underline;
+}
+
+.NewProvidence-plans .switch-plan-link:hover {
+  text-decoration: none;
+}
+
+
+.NewProvidence-plans .plan-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.NewProvidence-plans .plan-box label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 340px;
+  min-width: 290px;
+  min-height: 510px;
+  margin: 0 -5px;
+  padding: 50px 20px;
+  border-radius: 8px;
+  background: #ebebed;
+  cursor: pointer;
+}
+
+.NewProvidence-plans .plan-item input[type=radio]:checked + label{
+  min-height: 553px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: #fff;
+  -webkit-box-shadow: 0px 30px 50px 0px rgba(92,95,101,0.28);
+  -moz-box-shadow: 0px 30px 50px 0px rgba(92,95,101,0.28);
+  box-shadow: 0px 30px 50px 0px rgba(92,95,101,0.28);
+  z-index: 1;
+}
+
+.NewProvidence-plans .plan-title {
+  padding: 10px 0 25px;
+  font-weight: 300;
+  font-size: 32px;
+  color: #26272d;
+}
+
+.NewProvidence-plans .plan-price {
+  display: inline-flex;
+  font-weight: 700;
+  font-size: 11px;
+  color: #26272d;
+  border-radius: 25px;
+  border: 1px solid #d4d4d5;
+  padding: 6px 20px;
+}
+
+.NewProvidence-plans .plan-text {
+  padding: 49px 0 25px;
+  font-size: 20px;
+}
+
+.NewProvidence-plans .plan-list {
+  padding: 20px 0;
+}
+
+.NewProvidence-plans .plan-list li {
+  display: inline-block;
+  position: relative;
+  padding: 10px 0 10px 23px;
+  color: #26292c;
+  font-size: 16px;  
+}
+
+.NewProvidence-plans .plan-list li:before {
+  position: absolute;
+  display: block;
+  content:"";
+  top: 50%;
+  left: 0;
+  border-left: 2px solid #6fc754;
+  border-bottom: 2px solid #6fc754;
+  transform: translateY(-50%) rotate(-45deg);
+  width: 10px;
+  height: 4px;
+}
+
+.NewProvidence-plans .plan-btn {
+  display: inline-block;
+  padding: 10px;
+  min-width: 200px;
+  font-size: 16px;
+  color: #267df4;
+  border: 2px solid #267df4;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.NewProvidence-plans .plan-btn:hover {
+  color: #fff;
+  border-color: #3b89f5;
+  background: #3b89f5;
+}
+
+
+.NewProvidence-plans .plan-item input[type=radio]:checked + label .plan-btn {
+  color: #fff;
+  background: #267df4;
+}
+
+.NewProvidence-plans .plan-item input[type=radio]:checked + label .plan-btn:hover {
+  border-color: #3b89f5;
+  background: #3b89f5;
+}
+
+
+
 
 /*SUBSCRIBE BOTTOM*/
 
 /*FOOTER*/
 
-/*MEDIA*/
-@media (min-width: 533px) {
+.NewProvidence-footer .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 20px 15px 0;
+  border-top:1px solid #f4f4f4;
+  border-bottom:1px solid #f4f4f4;
+}
 
+.NewProvidence-footer .social-wrap {
+  width: 100%;
+  padding: 18px 0 10px;
+}
+
+.NewProvidence-footer .social-apple img,
+.NewProvidence-footer .social-logo img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.NewProvidence-footer .social-apple {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.NewProvidence-footer .social-text {
+  padding: 25px 0;
+  font-size: 14px;
+}
+
+.NewProvidence-footer .social-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 35px 0;
+}
+
+.NewProvidence-footer .social-list a {
+  display: block;
+  margin: 0 5px;
+  padding: 5px;
+  font-size: 18px;
+  color: #bdbec0;
+  transition: .3s ease-out;
+  border-radius: 50%;
+}
+
+.NewProvidence-footer .social-list a:hover {
+  color: #fff;
+  background: #bdbec0;
+}
+
+.NewProvidence-footer .menu-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.NewProvidence-footer .menu-list {
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.NewProvidence-footer .menu-list .menu-title {
+  padding: 8px 10px;
+  color: #26272d;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.NewProvidence-footer .menu-list a {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #8c8f94;
+  cursor: pointer;
+}
+
+.footer-bottom .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.footer-bottom .site-logo-wrap,
+.footer-bottom .site-link-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.footer-bottom .site-link-wrap {
+  font-size: 14px;
+}
+
+.footer-bottom .site-logo-wrap {
+  padding-right: 10px;
+  padding-left: 10px;  
+}
+
+.footer-bottom .site-link-wrap a {
+  display: inline-block;
+  padding: 0 3px;
+  text-decoration: underline;
+}
+
+.footer-bottom .site-link-wrap a:hover {
+  text-decoration: none;
+}
+
+.footer-bottom .site-logo-wrap p {
+  padding: 0 8px;
+  text-transform: uppercase;
+  color: #26272d;
+  font-weight: 700;
+  font-size: 9px;
+}
+
+.footer-bottom .site-logo-wrap img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/*MEDIA*/  
+
+@media (min-width: 320px) {
+  .NewProvidence-plans {
+    padding: 40px 0;
+  }
+
+  .NewProvidence-plans .content {
+    justify-content: center;
+  }
+
+  .NewProvidence-plans .switch-plan,
+  .NewProvidence-plans .switch-plan-title {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+  }
+
+  .NewProvidence-footer .menu-wrap {
+    width: 100%;
+  }
+}
+
+@media (min-width: 533px) {
+  .NewProvidence-footer .menu-list {
+    width: auto;
+  }
+  
 }
 
 @media (min-width: 768px) {
+  .NewProvidence-plans .switch-plan-title {
+    font-size: 42px;
+  }
+
+  .NewProvidence-footer .content {
+    justify-content: space-between;
+  }  
+
+  .footer-bottom .site-logo-wrap,
+  .footer-bottom .site-link-wrap {
+    justify-content: space-between;
+  }
+
+  .footer-bottom .site-logo-wrap,
+  .footer-bottom .site-link-wrap {
+    padding: 32px 0;
+  }
 
 }
 
 @media (min-width: 1024px) {
+  .NewProvidence-plans {
+    padding: 180px 0 211px;
+  }
 
+  .NewProvidence-plans .content,
+  .footer-bottom .content {
+    justify-content: space-between;
+  }
+
+  .NewProvidence-plans .switch-plan-title {
+    text-align: left;
+  }
+
+  .NewProvidence-plans .switch-plan {
+    width: 30%;
+    max-width: 330px;
+    text-align: left;
+  }
+
+  .NewProvidence-footer .social-wrap {
+    max-width: 270px;
+    text-align: left;
+  }
+
+  .NewProvidence-footer .social-list {
+    justify-content: flex-start;
+  }
+
+  .NewProvidence-footer .content {
+    padding: 80px 15px;
+  }
+
+  .NewProvidence-footer .menu-wrap {
+    text-align: left;
+    width: auto;
+  }
+
+  .NewProvidence-footer .social-apple img,
+  .NewProvidence-footer .social-logo img {
+    margin: 0 auto 0 0;
+  }
 }
 
 @media (min-width: 1280px) {
