@@ -17,8 +17,8 @@ a {
 }
 
 h2, h3 {
-  font-family: VarelaRound, sans-serif;
-  font-weight: 600;
+  font-family: Varela-Round, sans-serif;
+  font-weight: 400;
   color: #26272d;
 }
 
@@ -88,6 +88,32 @@ li {
 }
 
 /*INTERFACE*/
+.NewProvidence-interface {
+  background-color: #f5f5f8;
+}
+
+.NewProvidence-interface-title {
+  padding: 30px 0 20px;
+}
+
+.NewProvidence-interface hr {
+  width: 50px;
+  height: 2px;
+  margin: 5px auto 30px;
+  background-color: #267df4;
+  border: none;
+}
+
+.NewProvidence-interface-descr {
+  font-size: 12px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.NewProvidence-interface-screens {
+  display: flex;
+  overflow: scroll;
+}
 
 /*SUBSCTIBE*/
 .NewProvidence-subscribe, .NewProvidence-subscribe-bottom {
@@ -161,7 +187,48 @@ li {
  background-color:  #26272d;
 }
 
+/*SUBSCRIBE*/
+
 /*SLIDER*/
+.NewProvidence-slider {
+  position: relative;
+  margin-top: 20%;
+}
+
+.NewProvidence-slider-img {
+  display: flex;
+  justify-content: center;
+}
+
+.NewProvidence-slider-img-photo1, .NewProvidence-slider-img-photo2 {
+  display: none;
+}
+
+.NewProvidence-slider-descr {
+  margin: 30px 10px 20px;
+}
+
+.NewProvidence-slider-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #26272d;
+  margin: 50px 0;
+}
+
+.fas {
+  position: absolute;
+  top: 10%;
+  font-size: 60px;
+  color: #8c8f94;
+}
+
+.fa-angle-left {
+  left: 5%;
+}
+
+.fa-angle-right {
+  right: 5%;
+}
 
 /*PLANS*/
 
@@ -171,7 +238,6 @@ li {
 
 /*MEDIA*/
 @media (min-width: 533px) {
-
   .NewProvidence-spread-left {
     width: 500px;
   }
@@ -183,9 +249,16 @@ li {
   .NewProvidence-subscribe-form-button {
     padding: 8px 20px;
   }
+
+  .NewProvidence-slider {
+    margin: 50px 0;
+  }
 }
 
 @media (min-width: 768px) {
+  .NewProvidence-slider {
+    margin: 15% 0;
+  }
 
   .NewProvidence-spread {
     flex-direction: row;
@@ -198,10 +271,13 @@ li {
     align-items: flex-start;
     text-align: start;
   }
+  
+  .NewProvidence-slider-descr {
+    margin: 30px 15% 20px;
+  }
 }
 
 @media (min-width: 1024px) {
-  
   .NewProvidence-spread-left {
     margin-left: 100px;
   }
@@ -209,8 +285,25 @@ li {
   .NewProvidence-spread-right img {
     padding-top: 20px;
   }
-}
+  
+  .NewProvidence-slider-img-photo1, .NewProvidence-slider-img-photo2 {
+    display: block;
+    opacity: 0.5;
+    height: 100%;
+    margin: 30px 60px;
+  }
+
+  .NewProvidence-slider-descr {
+    margin: 50px 25% 30px;
+  }
+ }
 
 @media (min-width: 1280px) {
-
+  .fa-angle-left {
+    left: 15%;
+  }
+  
+  .fa-angle-right {
+    right: 15%;
+  }
 }
