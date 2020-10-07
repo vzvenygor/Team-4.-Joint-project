@@ -1,6 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Varela+Round&display=swap');
+
+/*Icomoon font*/
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('font/icomoon/icomoon.eot?3qy8rf');
+  src:  url('font/icomoon/icomoon.eot?3qy8rf#iefix') format('embedded-opentype'),
+    url('font/icomoon/icomoon.ttf?3qy8rf') format('truetype'),
+    url('font/icomoon/icomoon.woff?3qy8rf') format('woff'),
+    url('font/icomoon/icomoon.svg?3qy8rf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {  
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pinterest:before {
+  content: "\e900";
+}
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-tumblr:before {
+  content: "\eab9";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+
+/* end Icomoon font*/
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,8 +57,7 @@ body {
   font-size: 18px;
   line-height: 1.5;
   text-align: center;
-  max-width: 1980px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 a {
@@ -17,8 +65,8 @@ a {
 }
 
 h2, h3 {
-  font-family: Varela-Round, sans-serif;
-  font-weight: 400;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 600;
   color: #26272d;
 }
 
@@ -30,340 +78,303 @@ li {
   list-style: none;
 }
 
-/*HEADER*/
-
-.menu-btn {
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 2;
-  display: none;
-}
-
-.NewProvidence-header {
-  display: flex;
-  position: relative;
-}
-
-.NewProvidence-header-logo {
-  display: flex;
-  align-self: center;
-  margin-top: 35px;
-  margin-bottom: 30px;
-  margin-right: 80px;
-  position: absolute;
-  z-index: 2;
-}
-
-.NewProvidence-header {
+.content {
+  max-width: 1170px;
   width: 100%;
-  height: 990px;
-  background: url("img/header-cover.png") no-repeat center center/cover;
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-.NewProvidence-header-navigation {
+/*HEADER*/
+.NewProvidence-header {
+  position: relative;
+  width: 100%;
+  background: url("img/header-cover-x-1024.png") no-repeat center center/cover;
+}
+
+/* burger menu */
+.NewProvidence-header-burger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.NewProvidence-header-burger-menu-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.NewProvidence-header-burger-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 50px;
+  background-color: #8c8f94;
+  opacity: 90%;
   z-index: 1;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 44px;
 }
 
-.NewProvidence-header-navigation-list li:nth-child(3) {
-  margin-right: 80px;
+.NewProvidence-header-burger-nav-item a {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: 400ms;
 }
 
-.NewProvidence-header-navigation-list li:nth-child(4) {
-  margin-left: 120px;
+.NewProvidence-header-burger-nav-item:hover {
+  font-size: 30px;
 }
 
-.NewProvidence-header-navigation-list {
-  display: flex;
-  align-items: center;
-}
-
-.NewProvidence-header-navigation-menu-1 .NewProvidence-header-navigation-list-item {
-  margin-right: 40px;
-}
-
-.NewProvidence-header-navigation-menu-2 .NewProvidence-header-navigation-list-item {
-  margin-right: 30px;
-}
-
-.NewProvidence-header-navigation-menu-1 .NewProvidence-header-navigation-list-item:last-child {
-  margin-right: 0;
-}
-
-.NewProvidence-header-navigation-menu-2 .NewProvidence-header-navigation-list-item:last-child {
-  margin-right: 0;
-}
-
-.NewProvidence-header-navigation-list-link {
-  font-size: 16px;
-  color: #26272D;
-}
-
-.NewProvidence-header-navigation-list-link-gray {
-  font-size: 16px;
-  color: #1B1C1E;
+.NewProvidence-header-burger-menu:hover .NewProvidence-header-burger-nav {
+  display: block;
 }
 
 .NewProvidence-header-navigation-list-link-btn {
-  padding: 8px 25px 8px 25px;
+  background: #267df4;
+  color: white;
+  padding: 13px 18px;
+  border-radius: 30px;
+}
+
+.NewProvidence-header-navigation-list-link-btn:hover {
+  box-shadow: 3px 3px 5px #8c8f94;
+}
+
+.NewProvidence-header-burger-nav-item:last-child {
+  padding: 20px 0;
+}
+/* end burger menu */
+
+/* nav */
+.NewProvidence-header-nav {
+  display: none;
+  justify-content: space-between;
+  margin: 0 15%;
+  padding-top: 30px;
+}
+
+.NewProvidence-header-nav-left-items {
+  display: flex;
+}
+
+.NewProvidence-header-nav-left-item {
+  padding-right: 20px;
+  font-weight: 600;
   cursor: pointer;
-  display: inline-block;
-  border: 1px solid #267DF4;
-  background-color: #267DF4;
-  border-radius: 25px;
-  color: #ffffff;
-  font-size: 16px;
 }
 
-.NewProvidence-header-navigation-list-link-btn i {
-  margin: 0 15px 0 -2px;
-  display: inline-block;
+.NewProvidence-header-nav-left-item:hover {
+  color: #8c8f94;
 }
 
-.NewProvidence-header-info {
-  align-items: center;
-  text-align: center;
+.NewProvidence-header-logo {
+  position: absolute;
+  top: 30px;
+  left: 40%;
 }
+
+.NewProvidence-header-nav-right-items {
+  display: flex;
+}
+
+.NewProvidence-header-nav-right-item {
+  padding-left: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.NewProvidence-header-nav-right-item:hover {
+  color: #8c8f94;
+}
+/* end nav */
 
 .NewProvidence-header-info-title {
-  margin: 30px 0 25px 0;
-  font-size: 40px;
-  line-height: 50px;
+  margin: 40px 20px 20px;
 }
 
 .NewProvidence-header-info-text {
-  margin: 0 25px 25px 25px;
-  font-size: 20px;
-} 
-
-.NewProvidence-header-info-title {
-  font-family: VarelaRound, sans-serif;
-  color: #26272D;
-}
-
-.NewProvidence-header-info-text {
-  font-size: 20px;
-  line-height: 28px;
-  color: #8C8F94;
+  margin: 0 40px 20px;
 }
 
 .NewProvidence-header-info-btn {
-  margin-bottom: 50px;
-  padding: 10px 40px 10px 40px;
+  padding-top: 20px;
+  padding-bottom: 150px;
+}
+
+.NewProvidence-header-info-btn-a {
+  color: #000;
+  background: rgba(0,0,0,0);
+  border: 2px solid #dadcde;
+  padding: 19px;
+  border-radius: 30px;
   cursor: pointer;
-  display: inline-block;
-  border: 1px solid #26272D;
-  background: rgba(0, 0, 0, 0.0001);
-  border-radius: 25px;
-  color: #26272D;
-  font-size: 16px;
+  transition: 400ms;
 }
 
-.NewProvidence-header-info-btn i {
-  margin: 0 15px 0 -2px;
-  display: inline-block;
+.NewProvidence-header-info-btn-a:hover {
+  box-shadow: 3px 3px 5px #8c8f94;
 }
 
-/*BENEFITS-1*/
+/*BENEFITS*/
+.NewProvidence-benefits-top {
+  margin: 10%;
+}
 
-.NewProvidence-benefits-1 {
+.NewProvidence-benefits-img {
+  padding: 30px 0 20px;
+}
+
+.NewProvidence-benefits-text {
+  padding: 20px 0;
+}
+
+.NewProvidence-benefits-line {
+  background: #bdbec0;
+  margin: 0 10%;
+  height: 1px;
+}
+
+.NewProvidence-benefits-bottom-img img {
   width: 100%;
-  height: 600px;
+  margin-top: 40px;
 }
 
-.NewProvidence-benefits-1-lock {
-  align-items: center;
-  margin: 30px 25px 40px 25px;
-  text-align: start;
+.NewProvidence-benefits-bottom-description {
+  margin: 0 10%;
 }
 
-.NewProvidence-benefits-1-clock {
-  align-items: center;
-  text-align: start;
-  margin: 30px 25px 40px 25px;
+.NewProvidence-benefits-bottom-heading {
+  margin: 30px 0;
 }
 
-.NewProvidence-benefits-1-imgs {
-  margin-bottom: 30px;
+.NewProvidence-benefits-bottom-text {
+  margin-bottom: 10px;
 }
 
-.NewProvidence-benefits-1-heading {
-  margin-bottom: 30px;
-  font-family: Lato, sans-serif;
-  font-size: 26px;
-  font-style: normal;
-  line-height: 34px;
-  color: #26272D;
+.NewProvidence-benefits-bottom-btn {
+  background: #267df4;
+  border-radius: 30px;
+  padding: 10px 20px;
+  color: white;
+  width: 200px;
+  height: 50px;
+  margin: 20px auto;
+  transition: 400ms;
 }
 
-.NewProvidence-benefits-1-text {
-  font-family: Lato, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  line-height: 26px;
-  color: #8C8F94;
+.NewProvidence-benefits-bottom-btn:hover {
+  box-shadow: 3px 3px 5px #8c8f94;
 }
 
-/*BENEFITS-2*/
-
-.NewProvidence-benefits-2-img {
-  margin: 300px 0 40px 0;
-  width: 100%;
-  height: auto;
+.NewProvidence-benefits-bottom-btn .fas {
+  padding-left: 10px;
+  padding-top: 5px;
 }
 
-.NewProvidence-benefits-2-description {
-  align-items: center;
-  text-align: start;
-  margin: 30px 25px 30px 25px;
-
+.NewProvidence-benefits-bottom-btn-2 {
+  background: rgba(0,0,0,0);
+  border-radius: 30px;
+  padding: 10px 15px;
+  border: 2px solid #dadcde;
+  color: #000000;
+  margin: 20px 0;
+  transition: 400ms;
 }
 
-.NewProvidence-benefits-2-heading {
-  margin-bottom: 60px;
-  font-family: VarelaRound, sans-serif;
-  font-weight: 400px;
-  font-size: 42px;
-  line-height: 52px;
-  color: #26272D;
+.NewProvidence-benefits-bottom-btn-2:hover {
+  box-shadow: 3px 3px 5px #8c8f94;
 }
-
-.NewProvidence-benefits-2-text {
-  font-size: 20px;
-  line-height: 28px;
-  color: #8C8F94;
-}
-
-.NewProvidence-benefits-2-btns {
-  align-items: center;
-}
-
-.NewProvidence-benefits-2-btn-1 {
-  margin: 70px 35px 30px 0;
-  padding: 8px 25px 8px 25px;
-  cursor: pointer;
-  display: inline-block;
-  border: 1px solid #267DF4;
-  background-color: #267DF4;
-  border-radius: 25px;
-  color: #ffffff;
-  font-size: 16px;
-}
-
-.NewProvidence-benefits-2-btn-1 i {
-  margin: 0 -2px 0 15px;
-  display: inline-block;
-}
-
-.NewProvidence-benefits-2-btn-2 {
-  margin-bottom: 70px;
-  padding: 10px 40px 10px 40px;
-  cursor: pointer;
-  display: inline-block;
-  border: 1px solid #26272D;
-  background: rgba(0, 0, 0, 0.0001);
-  border-radius: 25px;
-  color: #26272D;
-  font-size: 16px;
-}
-
-
-
 
 /*SPREAD*/
 .NewProvidence-spread {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  padding-top: 20px;
+  padding-top: 40px;
 }
-
+  
 .NewProvidence-spread-left {
-  margin-left: 20px;
-  margin-top: 50px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
+  margin: 0 10%;
 }
-
-.NewProvidence-spread-left-header {
-  margin-bottom: 25px;
-}
-
+  
 .NewProvidence-spread-left-content {
   margin-top: 25px;
 }
-
+  
 .NewProvidence-spread-left-partners {
-  margin-top: 50px;
-  margin-bottom: 25px;
-  font-weight: bold;
+  margin: 50px 0 25px;
+  font-weight: 600;
   color:  #26272d; 
   font-size: 10px;
 }
-
+  
 .NewProvidence-spread-left-partners-logo {
   display: flex;
+  justify-content: center;
 }
-
+  
 .NewProvidence-spread-left-partners-logo img {
   margin-right: 20px;
 }
-
+  
 .NewProvidence-spread-right img {
-  margin-left: 50px;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  margin: auto;
   padding-top: 50px;
 }
 
 /*INTERFACE*/
 .NewProvidence-interface {
-  background-color: #f5f5f8;
+  background: #f5f5f8;
+  width: 100%;
 }
 
 .NewProvidence-interface-title {
-  padding: 30px 0 20px;
+  padding-top: 80px;
 }
 
 .NewProvidence-interface hr {
+  margin: 20px auto;
   width: 50px;
-  height: 2px;
-  margin: 5px auto 30px;
-  background-color: #267df4;
-  border: none;
+  background: #267df4;
+  height: 3px;
 }
 
 .NewProvidence-interface-descr {
   font-size: 12px;
-  font-weight: 600;
-  padding-bottom: 20px;
+  font-weight: 700;
+  color: #8c8f94;
+  text-align: center;
+  margin-bottom: 44px;
+  margin-top: 30px;
 }
 
-.NewProvidence-interface-screens {
-  display: flex;
-  overflow: scroll;
+.NewProvidence-interface-screens-img img {
+  width: 100%;
+}
+
+.Screen1, 
+.Screen4 {
+  display: none;
 }
 
 /*SUBSCTIBE*/
+.NewProvidence-subscribe {
+  padding: 0 10%;
+  background: #f5f5f8;
+}
+
 .NewProvidence-subscribe, .NewProvidence-subscribe-bottom {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.NewProvidence-subscribe img {
+  width: 10%;
+  padding-top: 50px;
 }
 
 .NewProvidence-subscribe-header {
@@ -374,6 +385,7 @@ li {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-bottom: 30px;
 }
 
 .NewProvidence-subscribe-form-email {
@@ -405,159 +417,452 @@ li {
   border: 2px solid #6fc754;
 }
 
-.NewProvidence-subscribe-text {
-  margin: 35px 0 15px;
-  font-size: 11px;
-}
-
 .NewProvidence-subscribe-btn {
   background-color: #000000;
   color: #fff;
   border: none;
   border-radius: 25px;
-  padding: 12px 20px;
+  padding: 8px 20px;
   display: flex;
   font-size: 12px;
+  margin-bottom: 40px;
 }
 
-.NewProvidence-subscribe-btn img {
+.NewProvidence-subscribe-text {
+  margin-bottom: 20px;
+}
+
+.NewProvidence-subscribe-btn .fab {
   margin-right: 15px;
-  width: 25px;
-  height: auto;
+  font-size: 30px;
+}
+
+.NewProvidence-subscribe-btn-text {
+  text-align: left;
+}
+
+.NewProvidence-subscribe-btn-txt {
+  color: #fff;
+  font-size: 11px;
+}
+
+.NewProvidence-subscribe-btn-txt-app {
+  font-size: 16px;
+  color: #fff;
 }
 
 .NewProvidence-subscribe-btn:hover {
  background-color:  #26272d;
 }
 
-/*SUBSCRIBE*/
-
 /*SLIDER*/
 .NewProvidence-slider {
+  margin: 0 10%;
   position: relative;
-  margin-top: 20%;
-}
-
-.NewProvidence-slider-img {
-  display: flex;
-  justify-content: center;
 }
 
 .NewProvidence-slider-img-photo1, .NewProvidence-slider-img-photo2 {
   display: none;
 }
 
+.NewProvidence-slider-img-photo {
+  margin-top: 60px;
+}
+
 .NewProvidence-slider-descr {
-  margin: 30px 10px 20px;
+  margin: 30px 0 20px;
 }
 
 .NewProvidence-slider-name {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  color: #26272d;
-  margin: 50px 0;
+  margin: 30px 0 60px;
 }
 
-.fas {
+.NewProvidence-slider .fas {
   position: absolute;
-  top: 10%;
-  font-size: 60px;
+  font-size: 40px;
   color: #8c8f94;
+  top: 30%;
+  cursor: pointer;
 }
 
-.fa-angle-left {
-  left: 5%;
+.NewProvidence-slider .fa-angle-left {
+  left: 1%;
 }
 
-.fa-angle-right {
-  right: 5%;
+.NewProvidence-slider .fa-angle-right {
+  right: 1%;
 }
 
 /*PLANS*/
+.NewProvidence-plans {
+  line-height: 1.2;
+  background: #f4f4f5;
+}
+.NewProvidence-plans .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
 
-/*SUBSCRIBE BOTTOM*/
+.NewProvidence-plans .switch-plan {
+  width: 30%;
+  max-width: 330px;
+  padding: 30px 20px 40px 0;
+  text-align: left;
+}
 
-/*FOOTER*/
+.NewProvidence-plans .switch-plan-title {
+  padding-bottom: 20px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 32px;
+  text-align: left;
+  color: #26272d;
+}
 
-/*MEDIA*/
+.NewProvidence-plans .switch-plan-change {
+  padding: 20px 0 34px;
+}
 
-@media (max-width: 768px) {
-  .NewProvidence-header-logo {
-    margin-right: 0;
-  }
+.NewProvidence-plans .switch-plan-change-title {
+  padding: 17px 0;
+  color: #26272d;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
-  .NewProvidence-header-navigation-list li:nth-child(3) {
-    margin-right: 0;
-  }
-  
-  .NewProvidence-header-navigation-list li:nth-child(4) {
-    margin-left: 0;
-  }
+.NewProvidence-plans .radio-block {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  border: 1px solid #d5d6d7;
+  border-radius: 25px;
+}
 
-  .NewProvidence-header-navigation-menu-1 .NewProvidence-header-navigation-list-item {
-    margin-right: 0;
-  }
-  
-  .NewProvidence-header-navigation-menu-2 .NewProvidence-header-navigation-list-item {
-    margin-right: 0;
-  }
+.NewProvidence-plans input[type=radio] {
+  display: none;
+}
 
-  .menu-btn {
-    display: block;
-  }
+.NewProvidence-plans .radio-block label {
+  display: inline-block;
+  min-width: 122px;
+  font-size: 16px;
+  padding: 11px;  
+  color: #8c8f94;
+  text-align: center;
+  border-right: none;
+  border-radius: 25px;
+  cursor: pointer;
+  user-select: none;  
+  transition: .3s ease-out; 
+}
 
-  .menu-btn:hover {
-    opacity: 0.5;
-  }
+.NewProvidence-plans .radio-block label:hover {
+  color: #000;
+}
 
- .NewProvidence-header-navigation ul.NewProvidence-header-navigation-list {
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 0;
-    background: #f2f2f2;
-    width: 50%;
-    height: 100%;
-    border-right: #cccccc 1px solid;
-    opacity: 0.9;
-    padding: 30px;
-    transform: translateX(-500px);
-    transition: transform 0.5s ease-in-out;
-  }
+.NewProvidence-plans .radio-block input[type=radio]:checked + label {
+  color: #000;
+  background: #fff;
+  -webkit-box-shadow: 0px 30px 50px 0px rgba(92,95,101,0.28);
+  -moz-box-shadow: 0px 30px 50px 0px rgba(92,95,101,0.28);
+  box-shadow: 0px 30px 50px 0px rgba(92,95,101,0.28);
+}
 
-  .NewProvidence-header-navigation ul.NewProvidence-header-navigation-list li {
-    padding: 10px;
-    border-bottom: #cccccc 1px solid;
-    font-size: 20px;
-  }
+.NewProvidence-plans .switch-plan-text {
+  padding: 30px 0; 
+}
 
-  .NewProvidence-header-navigation ul.NewProvidence-header-navigation-list li:last-child {
-    border-bottom: 0;
-  }
+.NewProvidence-plans .switch-plan-team {
+  font-size: 14px;
+}
 
-  .NewProvidence-header-navigation ul.NewProvidence-header-navigation-list.show {
-    transform: translateX(-20px);
-  }
+.NewProvidence-plans .switch-plan-team p {
+  display: inline-block;
+}
+
+.NewProvidence-plans .switch-plan-link {
+  color: #267df4;
+  text-decoration: underline;
+}
+
+.NewProvidence-plans .switch-plan-link:hover {
+  text-decoration: none;
 }
 
 
-@media (min-width: 533px) {
-  .NewProvidence-header-info-title {
-    margin-top: 50px;
-    margin-bottom: 30px;
-  }
-  
-  .NewProvidence-header-info-text {
-    margin: 50px 100px 50px 100px;
+.NewProvidence-plans .plan-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.NewProvidence-plans .plan-box label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 340px;
+  min-width: 290px;
+  min-height: 510px;
+  margin: 0 -5px;
+  padding: 50px 20px;
+  border-radius: 8px;
+  background: #ebebed;
+  cursor: pointer;
+}
+
+.NewProvidence-plans .plan-item input[type=radio]:checked + label{
+  min-height: 553px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: #fff;
+  -webkit-box-shadow: 0px 30px 50px 0px rgba(92,95,101,0.28);
+  -moz-box-shadow: 0px 30px 50px 0px rgba(92,95,101,0.28);
+  box-shadow: 0px 30px 50px 0px rgba(92,95,101,0.28);
+  z-index: 1;
+}
+
+.NewProvidence-plans .plan-title {
+  padding: 10px 0 25px;
+  font-weight: 300;
+  font-size: 32px;
+  color: #26272d;
+}
+
+.NewProvidence-plans .plan-price {
+  display: inline-flex;
+  font-weight: 700;
+  font-size: 11px;
+  color: #26272d;
+  border-radius: 25px;
+  border: 1px solid #d4d4d5;
+  padding: 6px 20px;
+}
+
+.NewProvidence-plans .plan-text {
+  padding: 49px 0 25px;
+  font-size: 20px;
+}
+
+.NewProvidence-plans .plan-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.NewProvidence-plans .plan-list li {
+  display: inline-block;
+  position: relative;
+  padding: 10px 0 10px 23px;
+  color: #26292c;
+  font-size: 16px;  
+}
+
+.NewProvidence-plans .plan-list li:before {
+  position: absolute;
+  display: block;
+  content:"";
+  top: 50%;
+  left: 0;
+  border-left: 2px solid #6fc754;
+  border-bottom: 2px solid #6fc754;
+  transform: translateY(-50%) rotate(-45deg);
+  width: 10px;
+  height: 4px;
+}
+
+.NewProvidence-plans .plan-btn {
+  display: inline-block;
+  padding: 10px;
+  min-width: 200px;
+  font-size: 16px;
+  color: #267df4;
+  border: 2px solid #267df4;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.NewProvidence-plans .plan-btn:hover {
+  color: #fff;
+  border-color: #3b89f5;
+  background: #3b89f5;
+}
+
+.NewProvidence-plans .plan-item input[type=radio]:checked + label .plan-btn {
+  color: #fff;
+  background: #267df4;
+}
+
+.NewProvidence-plans .plan-item input[type=radio]:checked + label .plan-btn:hover {
+  border-color: #3b89f5;
+  background: #3b89f5;
+}
+
+/*FOOTER*/
+.NewProvidence-footer .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 20px 15px 0;
+  border-top:1px solid #f4f4f4;
+  border-bottom:1px solid #f4f4f4;
+}
+
+.NewProvidence-footer .social-wrap {
+  width: 100%;
+  padding: 18px 0 10px;
+}
+
+.NewProvidence-footer .social-apple img,
+.NewProvidence-footer .social-logo img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.NewProvidence-footer .social-apple {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.NewProvidence-footer .social-text {
+  padding: 25px 0;
+  font-size: 14px;
+}
+
+.NewProvidence-footer .social-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 35px 0;
+}
+
+.NewProvidence-footer .social-list a {
+  display: block;
+  margin: 0 5px;
+  padding: 5px;
+  font-size: 18px;
+  color: #bdbec0;
+  transition: .3s ease-out;
+  border-radius: 50%;
+}
+
+.NewProvidence-footer .social-list a:hover {
+  color: #fff;
+  background: #bdbec0;
+}
+
+.NewProvidence-footer .menu-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.NewProvidence-footer .menu-list {
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.NewProvidence-footer .menu-list .menu-title {
+  padding: 8px 10px;
+  color: #26272d;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.NewProvidence-footer .menu-list a {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #8c8f94;
+  cursor: pointer;
+}
+
+.footer-bottom .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.footer-bottom .site-logo-wrap,
+.footer-bottom .site-link-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.footer-bottom .site-link-wrap {
+  font-size: 14px;
+}
+
+.footer-bottom .site-logo-wrap {
+  padding-right: 10px;
+  padding-left: 10px;  
+}
+
+.footer-bottom .site-link-wrap a {
+  display: inline-block;
+  padding: 0 3px;
+  text-decoration: underline;
+}
+
+.footer-bottom .site-link-wrap a:hover {
+  text-decoration: none;
+}
+
+.footer-bottom .site-logo-wrap p {
+  padding: 0 8px;
+  text-transform: uppercase;
+  color: #26272d;
+  font-weight: 700;
+  font-size: 9px;
+}
+
+.footer-bottom .site-logo-wrap img {
+  display: block;
+  max-width: 100%;
+}
+
+/*MEDIA*/  
+@media (min-width: 320px) {
+  .NewProvidence-plans {
+    padding: 40px 0;
   }
 
-  .NewProvidence-benefits-2-img {
-    margin: 100px 0 20px 0;
+  .NewProvidence-plans .content {
+    justify-content: center;
   }
-  .NewProvidence-spread-left {
-    width: 500px;
+
+  .NewProvidence-plans .switch-plan,
+  .NewProvidence-plans .switch-plan-title {
+    width: 100%;
+    max-width: none;
+    text-align: center;
   }
-  
+
+  .NewProvidence-footer .menu-wrap {
+    width: 100%;
+  }
+}
+
+@media (min-width: 533px) {
+  .NewProvidence-footer .menu-list {
+    width: auto;
+  }
+
   .NewProvidence-subscribe-form-email {
     width: 400px;
   }
@@ -565,180 +870,242 @@ li {
   .NewProvidence-subscribe-form-button {
     padding: 8px 20px;
   }
-
-  .NewProvidence-slider {
-    margin: 50px 0;
-  }
 }
 
 @media (min-width: 768px) {
-  .NewProvidence-slider {
-    margin: 15% 0;
+  .NewProvidence-header-info-btn {
+    padding-top: 40px;
   }
 
-  .NewProvidence-header-logo {
-    margin-top: 60px;
-  }
-  .NewProvidence-header-info-title {
-    margin: 50px 100px 25px 100px;
-  }
-  
-  .NewProvidence-header-info-text {
-    margin: 0 200px 60px 200px;
+  .NewProvidence-benefits-top {
+    display: flex;
+    justify-content: center;
+    text-align: left;
   }
 
-  .NewProvidence-benefits-2-img {
-    margin: 100px 0 40px 0;
-    width: 850px;
-    height: 800px;
+  .NewProvidence-benefits-items {
+    flex: 40%;
+    padding-right: 10px;
   }
 
-  .NewProvidence-benefits-2-description {
-    margin: 200px 150px 0 110px;
-    align-items: center;
-    text-align: start;
+  .NewProvidence-spread-left-header {
+    padding-top: 40px;
+  }
+
+  .NewProvidence-plans .switch-plan-title {
+    font-size: 42px;
+  }
+
+  .NewProvidence-footer .content {
+    justify-content: space-between;
+  }  
+
+  .footer-bottom .site-logo-wrap,
+  .footer-bottom .site-link-wrap {
+    justify-content: space-between;
+  }
+
+  .footer-bottom .site-logo-wrap,
+  .footer-bottom .site-link-wrap {
+    padding: 32px 0;
   }
 }
 
 @media (min-width: 1024px) {
-  .NewProvidence-header-info-title {
-    margin: 80px 320px 25px 310px;
-  }
-  
-  .NewProvidence-header-info-text {
-    margin: 0 350px 30px 350px;
+  .NewProvidence-header-burger-menu {
+    display: none;
   }
 
-  .NewProvidence-benefits-1 {
+  .NewProvidence-header-nav {
     display: flex;
   }
 
-  .NewProvidence-benefits-1-lock {
-    margin: 80px 120px 50px 100px;
-    align-items: center;
-    text-align: start;
+  .NewProvidence-benefits-top {
+    margin: 5% 10%;
   }
 
-  .NewProvidence-benefits-1-clock {
-    margin: 80px 100px 50px 0;
-    align-items: center;
-    text-align: start;
-  }
-
-  .NewProvidence-benefits-2 {
+  .NewProvidence-benefits-bottom-buttons {
     display: flex;
-  }
-
-  .NewProvidence-benefits-2-img {
-    margin: 200px 0 40px 0;
-    width: 550px;
-    height: 500px;
-  }
-
-  .NewProvidence-benefits-2-description {
-    margin: 100px 150px 230px 110px;
+    justify-content: center;
     align-items: center;
-    text-align: start;
+  }
+
+  .NewProvidence-benefits-bottom-btn {
+    margin: 20px;
   }
   
   .NewProvidence-spread {
-    flex-direction: row;
-    align-items: flex-start;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
   }
-  
+      
   .NewProvidence-spread-left {
     margin-top: 50px;
-    width: 400px;
-    align-items: flex-start;
     text-align: start;
+    flex: 35%;
   }
-  
-  .NewProvidence-slider-descr {
-    margin: 30px 15% 20px;
+
+  .NewProvidence-spread-right {
+    flex: 45%;
+  }
+ 
+  .NewProvidence-spread-right img {
+    padding-right: 40px;
+  }
+
+  .NewProvidence-spread-left-partners-logo {
+    justify-content: left;
+    padding-bottom: 50px;
+  }
+
+  .NewProvidence-interface-screens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .NewProvidence-slider-img-photo {
+    margin-top: 100px;
+  }
+
+  .NewProvidence-slider-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .NewProvidence-slider-img-photo1,
+  .NewProvidence-slider-img-photo2 {
+    display: block;
+    opacity: 0.4;
+    padding: 0 50px;
+    margin-top: 30px;
+  }
+    
+  .NewProvidence-plans {
+    padding: 180px 0 211px;
+  }
+
+  .NewProvidence-plans .content,
+  .footer-bottom .content {
+    justify-content: space-between;
+  }
+
+  .NewProvidence-plans .switch-plan-title {
+    text-align: left;
+  }
+
+  .NewProvidence-plans .switch-plan {
+    width: 30%;
+    max-width: 330px;
+    text-align: left;
+  }
+
+  .NewProvidence-footer .social-wrap {
+    max-width: 270px;
+    text-align: left;
+  }
+
+  .NewProvidence-footer .social-list {
+    justify-content: flex-start;
+  }
+
+  .NewProvidence-footer .content {
+    padding: 80px 15px;
+  }
+
+  .NewProvidence-footer .menu-wrap {
+    text-align: left;
+    width: auto;
+  }
+
+  .NewProvidence-footer .social-apple img,
+  .NewProvidence-footer .social-logo img {
+    margin: 0 auto 0 0;
   }
 }
 
-@media (min-width: 1024px) {
-  .NewProvidence-spread-left {
-    margin-left: 100px;
-  }
-
-  .NewProvidence-spread-right img {
-    padding-top: 20px;
-  }
-  
-  .NewProvidence-slider-img-photo1, .NewProvidence-slider-img-photo2 {
-    display: block;
-    opacity: 0.5;
-    height: 100%;
-    margin: 30px 60px;
-  }
-
-  .NewProvidence-slider-descr {
-    margin: 50px 25% 30px;
-  }
- }
-
-  .NewProvidence-header-navigation-list li:nth-child(3) {
-    margin-right: 300px;
-  }
-  
-  .NewProvidence-header-navigation-list li:nth-child(4) {
-    margin-left: 300px;
+@media (min-width: 1280px) {
+  .NewProvidence-header {
+    background: url("img/header-cover.png") no-repeat center center/cover;
   }
 
   .NewProvidence-header-info-title {
-    margin: 80px 420px 35px 410px;
-    font-size: 62px;
-    line-height: 72px;
-    }
+    margin-top: 120px;
+  }
 
-    .NewProvidence-header-info-text {
-      margin: 0 400px 30px 400px;
-    }
-
-    .NewProvidence-benefits-1 {
-      display: flex;
-    }
-
-    .NewProvidence-benefits-1-lock {
-      margin: 140px 120px 170px 250px;
-      align-items: center;
-      text-align: start;
-    }
-
-    .NewProvidence-benefits-1-clock {
-      margin: 140px 240px 200px 0;
-      align-items: center;
-      text-align: start;
-    }
-
-    .NewProvidence-benefits-2 {
-      display: flex;
-    }
-
-    .NewProvidence-benefits-2 {
-      display: flex;
-    }
-
-    .NewProvidence-benefits-2-img {
-      margin: 150px 0 40px 0;
-      width: 850px;
-      height: 800px;
-    }
-
-    .NewProvidence-benefits-2-description {
-      margin: 200px 220px 230px 100px;
-      align-items: center;
-      text-align: start;
-    }
-
-@media (min-width: 1280px) {
-  .fa-angle-left {
-    left: 15%;
+  .NewProvidence-header-info-text {
+    margin: 3% 25%;
   }
   
-  .fa-angle-right {
-    right: 15%;
+  .NewProvidence-header-info-btn {
+    padding: 40px 0 500px;
+  }
+
+  .NewProvidence-benefits-items:first-child {
+    margin-right: 70px;
+  }
+
+  .NewProvidence-benefits-line {
+    margin: 0 15%;
+    background: #bdbec0;
+  }
+
+  .NewProvidence-benefits-bottom {
+    display: flex;
+  }
+
+  .NewProvidence-benefits-bottom-img {
+    flex: 60%;
+  }
+
+  .NewProvidence-benefits-bottom-description {
+    flex: 40%;
+    text-align: left;
+    padding-top: 200px;
+    margin: 0 10% 0 5%;
+  }
+
+  .NewProvidence-benefits-bottom-text {
+    margin-bottom: 30px;
+  }
+
+  .NewProvidence-benefits-bottom-buttons {
+    justify-content: left;
+  }
+
+  .NewProvidence-benefits-bottom-btn {
+    margin: 0 20px 0 0;
+  }
+
+  .NewProvidence-spread-left {
+    margin: 0 2% 0 10%;
+  }
+
+  .NewProvidence-spread-right {
+    flex: 65%;
+  }
+
+  .NewProvidence-spread-right img {
+    padding: 0;
+  }
+
+  .Screen1, 
+  .Screen4 {
+    display: block;
+  }
+
+  .NewProvidence-subscribe img {
+    width: 10%;
+    margin-top: 50px;
+  }
+
+  .NewProvidence-slider-descr {
+    margin: 30px 30% 60px;
+  }
+
+  .NewProvidence-subscribe-header {
+    margin: 65px 0;
   }
 }
