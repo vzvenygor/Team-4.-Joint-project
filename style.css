@@ -154,7 +154,7 @@ li {
   display: none;
   justify-content: space-between;
   margin: 0 15%;
-  padding-top: 30px;
+  margin-top: -30px;
 }
 
 .NewProvidence-header-nav-left-items {
@@ -172,9 +172,7 @@ li {
 }
 
 .NewProvidence-header-logo {
-  position: absolute;
-  top: 30px;
-  left: 40%;
+  padding-top: 30px;
 }
 
 .NewProvidence-header-nav-right-items {
@@ -885,7 +883,7 @@ li {
 
   .NewProvidence-benefits-items {
     flex: 40%;
-    padding-right: 10px;
+    padding-right: 20px;
   }
 
   .NewProvidence-spread-left-header {
