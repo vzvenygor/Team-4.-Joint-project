@@ -371,7 +371,6 @@ li {
 }
 
 .NewProvidence-subscribe img {
-  width: 10%;
   padding-top: 50px;
 }
 
@@ -394,7 +393,6 @@ li {
   border: 1px solid #ccc;
   border-radius: 25px;
   box-sizing: border-box;
-  font-weight: bold;
   position: relative;
 }
 
@@ -405,7 +403,6 @@ li {
   margin: 0 -4px;
   color:#fff;
   background-color: #6fc754;
-  font-weight: bold;
   position: absolute;
 }
 
@@ -413,6 +410,7 @@ li {
   background-color: #fff;
   color: #6fc754;
   border: 2px solid #6fc754;
+  cursor: pointer;
 }
 
 .NewProvidence-subscribe-btn {
@@ -428,6 +426,7 @@ li {
 
 .NewProvidence-subscribe-text {
   margin-bottom: 20px;
+  font-size: 12px;
 }
 
 .NewProvidence-subscribe-btn .fab {
